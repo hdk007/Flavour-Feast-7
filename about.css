@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Rubik:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Rubik:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+}
+
+body, html {
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Make the video take up the full width of the container */
+    height: 100%; /* Make the video take up the full height of the container */
+    object-fit: cover; /* Maintain video aspect ratio and cover the entire container */
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    height: auto;
+    width: auto;
+}
+
+/* Your default styles for the navbar */
+/* Your default styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center vertically */
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 50px;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 4vh;
+    box-shadow: 0 0 10px 5px #ffff;
+}
+
+/* ... Rest of your CSS remains the same ... */
+
+
+
+.menu {
+    display: flex;
+    gap: 65px;
+}
+
+.logo h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4rem;
+    cursor: default;
+    color: rgb(182, 27, 15);
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+.menu a:hover{
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    order: 1; 
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+.card {
+    background: rgba(255, 252, 252, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    margin-left: 8%;
+    margin-top: 2%;
+    width: 80%;
+}
+
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.card-header h1 {
+    margin: 10px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+}
+
+.card-header p {
+    color: #0000;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.card-content {
+    padding: 20px 0;
+}
+
+.bd1{
+    color: black;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Add hover effect for an interactive feel */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+@media (max-width: 948px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        border: 2px solid #0000;
+        transition: all 0.4s ease;
+    }
+
+    .menu.active {
+        display: flex;
+        transition: all 0.4s ease;
+    }
+
+    .hamburger {
+        display: flex;
+        transition: all 0.4s ease;
+    }
+
+    .card{
+        margin-left: 5%;
+    }
+}

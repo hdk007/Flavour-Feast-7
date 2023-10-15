@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Rubik:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Rubik:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Make the video take up the full width of the container */
+    height: 100%; /* Make the video take up the full height of the container */
+    object-fit: cover; /* Maintain video aspect ratio and cover the entire container */
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    height: 96vh;
+    width: 100%;
+}
+
+/* Your default styles for the navbar */
+/* Your default styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center vertically */
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 50px;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 4vh;
+    box-shadow: 0 0 10px 5px #ffff;
+}
+
+/* ... Rest of your CSS remains the same ... */
+
+
+
+.menu {
+    display: flex;
+    gap: 65px;
+}
+
+.logo h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4rem;
+    cursor: default;
+    color: rgb(182, 27, 15);
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+.menu a:hover{
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    order: 1; 
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+.product-card {
+    display: flex;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 70%;
+    margin-left: 15%;
+    height: auto;
+    margin-top: 3%;
+    display: flex;
+}
+
+.product-image {
+    height: 220px;
+    margin-top: 1%;
+    border-radius: 10px;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.product-benefits {
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.order-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-button:hover{
+    padding: 12px 22px;
+    transition: all 0.2s ease;
+}
+
+.imagesContainer{
+    display: block;
+}
+
+#nextButton{
+    padding: 8px 18px;
+    border-radius: 6px;
+    background: transparent;
+    border: 2px solid #ffff;
+    cursor: pointer;
+    color: #ffff;
+    margin-top: 2%;
+}
+
+@media (max-width: 948px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        border: 2px solid #0000;
+        transition: all 0.4s ease;
+    }
+
+    .menu.active {
+        display: flex;
+        transition: all 0.4s ease;
+    }
+
+    .hamburger {
+        display: flex;
+        transition: all 0.4s ease;
+    }
+
+    .product-card{
+        display: block;
+        width: 90%;
+        margin-left: 2.5%;
+    }
+
+    .content{
+        height: auto;
+    }
+}
